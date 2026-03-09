@@ -10,7 +10,7 @@ export default function Mission() {
   return (
     <section id="миссия" className="py-40 px-6 md:px-16 bg-[#0a0a0a] relative overflow-hidden">
       {/* Background accent */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-[#c9a96e]/5 translate-x-1/3 -translate-y-1/3" aria-hidden />
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-[#5390d9]/5 translate-x-1/3 -translate-y-1/3" aria-hidden />
 
       <div ref={ref} className="max-w-5xl mx-auto">
         {/* Label */}
@@ -18,7 +18,7 @@ export default function Mission() {
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-[10px] tracking-[0.4em] uppercase text-[#c9a96e] mb-16 font-sans"
+          className="text-[10px] tracking-[0.4em] uppercase text-[#5390d9] mb-16 font-sans"
         >
           Миссия
         </motion.p>
@@ -28,13 +28,13 @@ export default function Mission() {
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
-          className="font-serif text-[clamp(2.5rem,6vw,5.5rem)] text-white leading-tight font-medium mb-16"
+          className="font-display text-[clamp(2.5rem,6vw,5.5rem)] text-white leading-tight font-medium mb-16"
         >
-          Стиль как
+          Одежда, в которой
           <br />
-          инструмент
+          не просто живут —
           <br />
-          <span className="text-[#c9a96e]">лидерства.</span>
+          <span className="text-[#5390d9]">в ней выражают.</span>
         </motion.h2>
 
         {/* Animated line */}
@@ -53,7 +53,7 @@ export default function Mission() {
             transition={{ duration: 0.8, delay: 0.7 }}
             className="text-base text-white/60 font-light font-sans leading-relaxed"
           >
-            Мы создаём новую культуру визуального образа предпринимателя. Где стиль — это не поверхностное, а стратегическое. Инструмент влияния, доверия и роста.
+            Мы создаём одежду с характером. Каждое изделие — авторское, каждый крой — осознанный. Одежда FRAPPÉSTUDIO отражает личность, а не следует за трендом.
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -61,7 +61,7 @@ export default function Mission() {
             transition={{ duration: 0.8, delay: 0.9 }}
             className="text-base text-white/60 font-light font-sans leading-relaxed"
           >
-            FRAPPE STUDIO — это пространство, где предприниматели и эксперты обретают целостный образ, который работает на их цели и ценности.
+            С 2018 года — в Екатеринбурге. Собственное производство, сертифицированные материалы, полный цикл от эскиза до доставки. Для тех, кто знает, чего хочет.
           </motion.p>
         </div>
       </div>

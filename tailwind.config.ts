@@ -10,14 +10,15 @@ const config: Config = {
     extend: {
       colors: {
         black: "#0a0a0a",
-        white: "#ffffff",
-        beige: "#f5f0e8",
-        gold: "#c9a96e",
-        muted: "#6b6b6b",
-        border: "#e8e3da",
+        surface: "#111111",
+        surface2: "#181818",
+        blue: "#5390d9",
+        "blue-dim": "#3b6fb5",
+        muted: "#888888",
+        border: "#222222",
       },
       fontFamily: {
-        serif: ["var(--font-playfair)", "Georgia", "serif"],
+        display: ["var(--font-montserrat)", "system-ui", "sans-serif"],
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
       },
       letterSpacing: {

@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
+import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin", "cyrillic"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800", "900"],
   display: "swap",
 });
 
@@ -17,13 +17,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "FRAPPE STUDIO — Экосистема стиля и лидерства",
+  title: "FRAPPÉSTUDIO — Дизайнерская одежда",
   description:
-    "Развитие личности через стиль, имидж и предпринимательство. Платформа для предпринимателей и экспертов.",
-  keywords: ["frappe studio", "имидж лидера", "личный бренд", "стиль", "предпринимательство"],
+    "Уникальные авторские изделия, которые не просто носят — в них живут. Дизайнерская одежда с 2018 года. Производство, мерч, капсулы.",
+  keywords: ["frappe studio", "дизайнерская одежда", "авторская одежда", "пошив", "мерч"],
   openGraph: {
-    title: "FRAPPE STUDIO",
-    description: "Экосистема стиля и лидерства",
+    title: "FRAPPÉSTUDIO",
+    description: "Дизайнерская одежда — Екатеринбург",
     type: "website",
   },
 };
@@ -34,8 +34,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru" className={`${playfair.variable} ${inter.variable}`}>
-      <body className="antialiased font-sans bg-white text-[#0a0a0a]">
+    <html lang="ru" className={`${montserrat.variable} ${inter.variable}`}>
+      <body className="antialiased font-sans bg-[#0a0a0a] text-white">
         {children}
       </body>
     </html>

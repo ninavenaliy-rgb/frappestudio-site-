@@ -26,17 +26,17 @@ export default function Hero() {
   return (
     <section
       ref={ref}
-      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#f5f0e8]"
+      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#0a0a0a]"
     >
-      {/* Background parallax texture */}
+      {/* Background accent circles */}
       <motion.div
         style={{ y }}
         className="absolute inset-0 z-0"
         aria-hidden
       >
-        {/* Subtle geometric accent */}
-        <div className="absolute top-1/4 right-1/4 w-[600px] h-[600px] rounded-full border border-[#c9a96e]/20 translate-x-1/2 -translate-y-1/2" />
-        <div className="absolute top-1/3 right-1/3 w-[300px] h-[300px] rounded-full border border-[#c9a96e]/15 translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full border border-[#5390d9]/10" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full border border-[#5390d9]/15" />
+        <div className="absolute top-1/4 right-1/4 w-[300px] h-[300px] rounded-full bg-[#5390d9]/5 blur-3xl" />
       </motion.div>
 
       {/* Content */}
@@ -50,19 +50,19 @@ export default function Hero() {
         {/* Pre-label */}
         <motion.p
           variants={item}
-          className="text-[10px] tracking-[0.4em] uppercase text-[#6b6b6b] mb-10 font-sans"
+          className="text-[10px] tracking-[0.4em] uppercase text-[#5390d9] mb-10 font-sans"
         >
-          Экосистема стиля и лидерства
+          Дизайнерская одежда · Екатеринбург · с 2018
         </motion.p>
 
         {/* Main headline */}
         <motion.h1
           variants={item}
-          className="font-serif text-[clamp(3.5rem,12vw,9rem)] leading-[0.9] font-semibold text-[#0a0a0a] tracking-tight mb-8"
+          className="font-display text-[clamp(3.5rem,12vw,9rem)] leading-[0.9] font-black text-white tracking-tight mb-8"
         >
-          FRAPPE
+          FRAPPÉ
           <br />
-          <span className="text-[#c9a96e]">STUDIO</span>
+          <span className="text-[#5390d9]">STUDIO</span>
         </motion.h1>
 
         {/* Divider */}
@@ -70,33 +70,34 @@ export default function Hero() {
           variants={item}
           className="flex items-center justify-center gap-4 mb-10"
         >
-          <div className="h-px w-16 bg-[#c9a96e]" />
-          <div className="w-1 h-1 rounded-full bg-[#c9a96e]" />
-          <div className="h-px w-16 bg-[#c9a96e]" />
+          <div className="h-px w-16 bg-[#5390d9]" />
+          <div className="w-1 h-1 rounded-full bg-[#5390d9]" />
+          <div className="h-px w-16 bg-[#5390d9]" />
         </motion.div>
 
         {/* Subheadline */}
         <motion.p
           variants={item}
-          className="font-sans text-base md:text-lg text-[#6b6b6b] font-light max-w-xl mx-auto mb-14 leading-relaxed"
+          className="font-sans text-base md:text-lg text-white/50 font-light max-w-xl mx-auto mb-14 leading-relaxed"
         >
-          Развитие личности через стиль, имидж и предпринимательство.
+          Уникальные изделия, которые не просто носят — в них живут.
+          Авторский дизайн, собственное производство, от 1 до 15 000 единиц.
         </motion.p>
 
         {/* CTAs */}
         <motion.div variants={item} className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="#join"
-            className="inline-flex items-center gap-2 bg-[#0a0a0a] text-white text-xs tracking-[0.2em] uppercase px-8 py-4 hover:bg-[#c9a96e] transition-all duration-500"
+            href="#продукты"
+            className="inline-flex items-center gap-2 bg-[#5390d9] text-white text-xs tracking-[0.2em] uppercase px-8 py-4 hover:bg-white hover:text-[#0a0a0a] transition-all duration-500"
           >
-            Начать путь
+            Смотреть коллекцию
             <span className="ml-1">→</span>
           </a>
           <a
-            href="#ecosystem"
-            className="inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase border border-[#0a0a0a]/30 px-8 py-4 text-[#0a0a0a] hover:border-[#0a0a0a] transition-all duration-300"
+            href="#join"
+            className="inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase border border-white/20 px-8 py-4 text-white/60 hover:border-white hover:text-white transition-all duration-300"
           >
-            Изучить экосистему
+            Заказать производство
           </a>
         </motion.div>
       </motion.div>
@@ -108,11 +109,11 @@ export default function Hero() {
         transition={{ delay: 2, duration: 1 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
-        <span className="text-[9px] tracking-[0.3em] uppercase text-[#6b6b6b]">Scroll</span>
+        <span className="text-[9px] tracking-[0.3em] uppercase text-[#888]">Scroll</span>
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ repeat: Infinity, duration: 1.8, ease: "easeInOut" }}
-          className="w-px h-10 bg-gradient-to-b from-[#6b6b6b] to-transparent"
+          className="w-px h-10 bg-gradient-to-b from-[#5390d9] to-transparent"
         />
       </motion.div>
     </section>

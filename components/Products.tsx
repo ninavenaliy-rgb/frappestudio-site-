@@ -6,84 +6,86 @@ import AnimateIn from "./AnimateIn";
 const products = [
   {
     index: "01",
-    title: "Имидж лидера",
-    description: "Индивидуальная работа над визуальным образом и личным брендом для предпринимателей и топ-менеджеров.",
-    tag: "Персональная программа",
-    href: "#",
+    title: "Верхняя одежда",
+    description: "Парки MIDI и MAXI, тренчи UNISEX, бомберы с авторской вышивкой. Водонепроницаемые мембранные материалы. Лаконичный крой, актуальные силуэты.",
+    tag: "от 9 450₽",
+    href: "https://frappestudio.orgs.biz/",
   },
   {
     index: "02",
-    title: "Эксперты",
-    description: "Формирование образа эксперта, который усиливает экспертность и привлекает правильную аудиторию.",
-    tag: "Для специалистов",
-    href: "#",
+    title: "Трикотаж и худи",
+    description: "Оверсайз-свитшоты, худи с объёмными принтами, кардиганы Zebra. 100% хлопок. Уникальные цвета: Dragon Heart, Ripe Fig, Santorini.",
+    tag: "от 3 600₽",
+    href: "https://frappestudio.orgs.biz/",
   },
   {
     index: "03",
-    title: "Корпоративные курсы",
-    description: "Программы развития стиля и имиджа для команд, направленные на укрепление корпоративной культуры.",
-    tag: "B2B программы",
-    href: "#",
+    title: "Платья и костюмы",
+    description: "Авторские платья-носки MINI и MIDI, платья-комбинации, вискозные костюмы. Eco-суэд, флис, жаккард. Силуэты, которые работают на вас.",
+    tag: "от 3 000₽",
+    href: "https://frappestudio.orgs.biz/",
   },
   {
     index: "04",
-    title: "События",
-    description: "Закрытые мероприятия, воркшопы и networking-встречи для участников экосистемы FRAPPE STUDIO.",
-    tag: "Сообщество",
-    href: "#",
+    title: "Создание бренда",
+    description: "Производство мерча, корпоративной формы и капсульных коллекций. Полный цикл: от эскиза до упаковки. Выпуск от 1 единицы до 15 000.",
+    tag: "Под ключ",
+    href: "#join",
   },
 ];
 
 export default function Products() {
   return (
-    <section id="продукты" className="py-36 px-6 md:px-16 bg-[#f5f0e8]">
+    <section id="продукты" className="py-36 px-6 md:px-16 bg-[#0a0a0a]">
       <AnimateIn>
-        <p className="text-[10px] tracking-[0.4em] uppercase text-[#c9a96e] mb-16 font-sans text-center">
-          Продукты
+        <p className="text-[10px] tracking-[0.4em] uppercase text-[#5390d9] mb-16 font-sans text-center">
+          Коллекция
         </p>
       </AnimateIn>
 
       <AnimateIn delay={0.1}>
-        <h2 className="font-serif text-[clamp(2.5rem,5vw,4.5rem)] text-[#0a0a0a] text-center max-w-2xl mx-auto mb-24 font-medium leading-tight">
-          Инструменты<br />экосистемы
+        <h2 className="font-display text-[clamp(2.5rem,5vw,4.5rem)] text-white text-center max-w-2xl mx-auto mb-24 font-bold leading-tight">
+          Авторские<br />изделия
         </h2>
       </AnimateIn>
 
-      <div className="grid md:grid-cols-2 gap-px bg-[#e8e3da]">
+      <div className="grid md:grid-cols-2 gap-px bg-[#222]">
         {products.map((product, i) => (
           <AnimateIn key={product.index} delay={i * 0.1}>
             <motion.a
               href={product.href}
-              whileHover={{ backgroundColor: "#0a0a0a" }}
+              target={product.href.startsWith("http") ? "_blank" : undefined}
+              rel={product.href.startsWith("http") ? "noopener noreferrer" : undefined}
+              whileHover={{ backgroundColor: "#111111" }}
               transition={{ duration: 0.4 }}
-              className="group block bg-white p-10 md:p-14 relative overflow-hidden"
+              className="group block bg-[#0a0a0a] p-10 md:p-14 relative overflow-hidden"
             >
               <motion.div
-                className="absolute bottom-0 left-0 h-0.5 bg-[#c9a96e]"
+                className="absolute bottom-0 left-0 h-0.5 bg-[#5390d9]"
                 initial={{ width: 0 }}
                 whileHover={{ width: "100%" }}
                 transition={{ duration: 0.5 }}
               />
 
               <div className="flex items-start justify-between mb-10">
-                <span className="text-[10px] tracking-[0.3em] uppercase text-[#c9a96e] font-sans group-hover:text-[#c9a96e]">
+                <span className="text-[10px] tracking-[0.3em] uppercase text-[#5390d9] font-sans">
                   {product.index}
                 </span>
-                <span className="text-[9px] tracking-widest uppercase text-[#6b6b6b] border border-[#e8e3da] px-3 py-1.5 font-sans group-hover:text-white group-hover:border-white/20 transition-colors duration-400">
+                <span className="text-[9px] tracking-widest uppercase text-[#888] border border-[#333] px-3 py-1.5 font-sans group-hover:text-white group-hover:border-white/20 transition-colors duration-300">
                   {product.tag}
                 </span>
               </div>
 
-              <h3 className="font-serif text-2xl md:text-3xl text-[#0a0a0a] mb-5 font-medium group-hover:text-white transition-colors duration-400">
+              <h3 className="font-display text-2xl md:text-3xl text-white mb-5 font-bold">
                 {product.title}
               </h3>
 
-              <p className="text-sm text-[#6b6b6b] leading-relaxed font-light font-sans group-hover:text-white/60 transition-colors duration-400">
+              <p className="text-sm text-white/40 leading-relaxed font-light font-sans group-hover:text-white/60 transition-colors duration-300">
                 {product.description}
               </p>
 
-              <p className="mt-10 text-[10px] tracking-[0.3em] uppercase text-[#0a0a0a] font-sans group-hover:text-white transition-colors duration-400">
-                Узнать подробнее →
+              <p className="mt-10 text-[10px] tracking-[0.3em] uppercase text-[#5390d9] font-sans">
+                Смотреть →
               </p>
             </motion.a>
           </AnimateIn>

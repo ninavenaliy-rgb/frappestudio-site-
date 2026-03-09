@@ -4,8 +4,8 @@ export default function Footer() {
   return (
     <footer className="bg-[#0a0a0a] border-t border-white/10 py-12 px-6 md:px-16">
       <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-        <p className="font-serif text-sm tracking-[0.25em] uppercase text-white font-semibold">
-          FRAPPE STUDIO
+        <p className="font-display text-sm tracking-[0.25em] uppercase text-white font-semibold">
+          FRAPPÉSTUDIO
         </p>
 
         <div className="flex items-center gap-8">
@@ -13,7 +13,7 @@ export default function Footer() {
             <a
               key={link}
               href="#"
-              className="text-[10px] tracking-[0.3em] uppercase text-white/40 hover:text-[#c9a96e] transition-colors duration-300 font-sans"
+              className="text-[10px] tracking-[0.3em] uppercase text-white/40 hover:text-[#5390d9] transition-colors duration-300 font-sans"
             >
               {link}
             </a>
